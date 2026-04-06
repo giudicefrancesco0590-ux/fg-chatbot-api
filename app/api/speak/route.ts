@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
+export const runtime = 'nodejs'
+
 const schema = z.object({ text: z.string().max(600) })
 
 export async function OPTIONS() {

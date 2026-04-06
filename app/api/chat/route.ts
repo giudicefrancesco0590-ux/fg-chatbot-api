@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { z } from 'zod'
 
+export const runtime = 'nodejs'
+
 const schema = z.object({
   message: z.string().max(2000),
   history: z.array(z.object({
